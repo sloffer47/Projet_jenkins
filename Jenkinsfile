@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         EC2_HOST = '13.61.100.227'
-        EC2_USER = 'ec2-user'
+        EC2_USER = 'ubuntu'
         APP_NAME = 'gestion-etudiants'
         GITHUB_REPO = 'https://github.com/sloffer47/Projet_jenkins.git'
         SSH_CREDENTIALS = 'ec2-ssh-key'
