@@ -6,7 +6,7 @@ services:
     container_name: projet_etudiant
     restart: unless-stopped
     ports:
-      - "4444:4444"
+      - "4444:5000"
     volumes:
       - ./app:/Projet_jenkins
     environment:
