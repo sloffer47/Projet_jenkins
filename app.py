@@ -75,7 +75,7 @@ def index():
         <h1 class="text-center text-primary mb-4">📚 Gestion des Étudiants (OOP)</h1>
 
         <div class="card shadow-sm p-4 mb-4">
-            <h3>Ajouter un étudiant</h3>
+            <h3>Ajouter un étudiant </h3>
             <form method="POST" action="/ajouter">
                 <div class="row g-2">
                     <div class="col-md-6"><input class="form-control" name="nom" placeholder="Nom" required></div>
