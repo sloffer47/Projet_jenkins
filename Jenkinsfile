@@ -26,7 +26,13 @@ pipeline {
                 sh 'cat Dockerfile || echo "Dockerfile non trouvé"'
             }
         }
-        
+        stage('🔑 Test SSH Connection') {
+            steps {
+                sshagent(['ec2-ssh-key']) {
+                    sh 'ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} "echo ✅ Connexion SSH réussie"'
+                }
+            }
+        }        
         stage('🚀 Deploy to EC2 Server') {
             steps {
                 echo 'Déploiement sur le serveur EC2 AWS...'
