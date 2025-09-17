@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  visa-checker:
+    build: .
+    container_name: projet_etudiant
+    restart: unless-stopped
+    volumes:
+      - ./app:/Projet_jenkins
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DISPLAY=:99
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
